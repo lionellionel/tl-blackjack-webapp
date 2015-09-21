@@ -1,0 +1,17 @@
+<p>
+<%=params[:username] %>
+
+dealer total is <%= @dealer_total %>
+<br>
+<%= show_hand(session[:dealer_hand])  %>
+<br><br>
+
+<%=params[:username] %> your total is <%= @user_total %><br>
+<%= show_hand(session[:user_hand])  %>
+
+<form action='hit' method='post'>
+  <input type='submit' name='hit_or_stay' value='hit' class='btn' text='fu' />
+</form>
+<form action='stay' method='post'>
+  <input type='submit' name='hit_or_stay' value='stay' class='btn' text='fu' />
+</form>
