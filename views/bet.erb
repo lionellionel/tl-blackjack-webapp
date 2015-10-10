@@ -1,0 +1,14 @@
+
+<% if @bet_maxed_out %>
+<div class="alert alert-error">You have no credit with us.<br>Only bet cash on hand</div>
+<% end %>
+<% if @zero_bet %>
+<div class="alert alert-error">You can't play for free!<br>Bet at least $1</div>
+<% end %>
+<h3>You have $<%= @money %></h3>
+<h3>How much do you want to bet?</h3>
+<form action="/bet" method="post">
+  <input type="text" name="bet"/>
+  <br/>
+  <input type="submit" class="btn"/>
+</form>
